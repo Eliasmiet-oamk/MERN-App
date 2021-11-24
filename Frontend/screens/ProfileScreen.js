@@ -19,7 +19,7 @@ import {
   import AsyncStorage from '@react-native-async-storage/async-storage';
  
 
-
+  const API_URL = 'http://87.100.203.8:8000'
 
 const ProfileScreen = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -47,7 +47,7 @@ const ProfileScreen = () => {
     try {
       const payload = {id};
       const response = await fetch(
-        'http://87.100.203.8:3001/api/products/getUserproducts',{
+        `${API_URL}/api/products/getUserproducts`,{
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',

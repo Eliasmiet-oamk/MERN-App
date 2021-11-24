@@ -5,7 +5,10 @@ import axios from 'axios'
 import {useNavigation} from '@react-navigation/native';
 import { useLogin } from '../Context/LoginProvider';
 
-const ImageUpload = props => {
+const API_URL = 'http://87.100.203.8:8000'
+
+
+const ImageUpload = () => {
   const {token} = useLogin();
   const [postImage, setPostImage] = useState('');
   const [description, setDescription] = useState('');
@@ -56,7 +59,7 @@ const ImageUpload = props => {
     
     
     try {
-      const res = await axios.post('http://87.100.203.8:3001/api/products/upload',
+      const res = await axios.post(`${API_URL}/api/products/upload`,
         formData,
         {
         headers: {
