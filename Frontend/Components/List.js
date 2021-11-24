@@ -31,7 +31,7 @@ function List( ) {
   
         try {
           const response = await fetch(
-            'http://87.100.203.8:3001/api/products/getproducts'
+            'http://87.100.203.8:8000/api/products/getproducts'
           )
           const posts = await response.json()
           dispatch(actionCreators.success(posts.reverse()))

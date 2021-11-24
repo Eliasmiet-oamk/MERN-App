@@ -33,7 +33,7 @@ function Header() {
        <View style={{alignItems:"center", justifyContent:"center", flex:1}}>
      <Text style={{fontWeight: 'bold'}} >APP NAME</Text>
      </View > 
-     <TouchableOpacity  onPress={() => isLoggedIn? navigation.navigate("ProfileScreen") :  navigation.navigate("Feed") } 
+     <TouchableOpacity  onPress={() => isLoggedIn? navigation.navigate("ProfileScreen") :  navigation.navigate("LoginScreen") } 
                 style={{
                           width: 50,
                           paddingRight: 50,
