@@ -119,7 +119,7 @@ const ProfileScreen = () => {
     formData.append("price", price);
     formData.append("description", description);
 
-    fetch(`http://87.100.203.8:3001/api/products/updatePost`,{
+    fetch(`${API_URL}/api/products/updatePost`,{
         method: 'PUT',
         headers: {
           Accept: 'application/json',
@@ -139,7 +139,7 @@ const ProfileScreen = () => {
 
   const deletePost = () => {
     const payload = {id};
-    fetch(`http://87.100.203.8:3001/api/products/deletePost`, {
+    fetch(`${API_URL}/api/products/deletePost`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
